@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "creation": "2026-11-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "feedback_internal",
+  "feedback_external",
+  "sales",
+  "promoters_meeting",
+  "google_review",
+  "makkal_kural_360",
+  "total",
+  "rating",
+  "ratings"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "feedback_internal",
+   "fieldtype": "Float",
+   "label": "Feedback Internal (10)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "feedback_external",
+   "fieldtype": "Float",
+   "label": "Feedback External (10)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "sales",
+   "fieldtype": "Float",
+   "label": "Sales (40)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "promoters_meeting",
+   "fieldtype": "Float",
+   "label": "Promoters Meeting (20)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "google_review",
+   "fieldtype": "Float",
+   "label": "Google Review (10)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "makkal_kural_360",
+   "fieldtype": "Float",
+   "label": "Makkal Kural, 360 Degree (10)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total (100)",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "Rating",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "ratings",
+   "fieldtype": "Long Text",
+   "label": "Ratings",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sales Traffic Light",
+ "name": "Gallery Traffic Light Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}

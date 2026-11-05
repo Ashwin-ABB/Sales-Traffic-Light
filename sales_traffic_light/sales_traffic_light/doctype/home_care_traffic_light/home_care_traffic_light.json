@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "creation": "2026-11-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "month",
+  "year",
+  "cb_filter",
+  "designation",
+  "department",
+  "filter_branch",
+  "load_employees",
+  "sb_sheet",
+  "score_sheet",
+  "sb_grid",
+  "items",
+  "sb_remarks",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb_filter",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation (filter)",
+   "options": "Designation",
+   "description": "Narrow the list to one designation of this sheet"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department (filter)",
+   "options": "Department"
+  },
+  {
+   "fieldname": "filter_branch",
+   "fieldtype": "Link",
+   "label": "Branch (filter)",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "load_employees",
+   "fieldtype": "Button",
+   "label": "Load Employees"
+  },
+  {
+   "fieldname": "sb_sheet",
+   "fieldtype": "Section Break",
+   "label": "Score Sheet"
+  },
+  {
+   "fieldname": "score_sheet",
+   "fieldtype": "HTML",
+   "label": "Score Sheet"
+  },
+  {
+   "fieldname": "sb_grid",
+   "fieldtype": "Section Break",
+   "label": "Detailed Grid (backup view)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Employees",
+   "options": "Home Care Traffic Light Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_remarks",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Home Care Traffic Light",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sales Traffic Light",
+ "name": "Home Care Traffic Light",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "HR Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "HC-TL-.YYYY.-.#####",
+ "is_submittable": 1,
+ "track_changes": 1,
+ "search_fields": "month,year"
+}

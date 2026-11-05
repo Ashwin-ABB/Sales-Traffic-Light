@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "creation": "2026-11-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "branch",
+  "feedback_internal",
+  "feedback_external",
+  "meeting",
+  "promoter_visit",
+  "promoter_conversion",
+  "testimonial",
+  "sales_collection",
+  "total",
+  "rating",
+  "ratings"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "fetch_from": "employee.employee_name",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "fetch_from": "employee.branch",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "feedback_internal",
+   "fieldtype": "Float",
+   "label": "Feedback Internal (5)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "feedback_external",
+   "fieldtype": "Float",
+   "label": "Feedback External (10)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "meeting",
+   "fieldtype": "Float",
+   "label": "Meeting (20)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "promoter_visit",
+   "fieldtype": "Float",
+   "label": "Promoter Visit (10)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "promoter_conversion",
+   "fieldtype": "Float",
+   "label": "Promoter Conversion (15)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "testimonial",
+   "fieldtype": "Float",
+   "label": "Testimonial (5)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "sales_collection",
+   "fieldtype": "Float",
+   "label": "Sales & Collection (35)",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total (100)",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "Rating",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "ratings",
+   "fieldtype": "Long Text",
+   "label": "Ratings",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sales Traffic Light",
+ "name": "ASM Traffic Light Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}
